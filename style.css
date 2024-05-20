@@ -1,0 +1,76 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background: linear-gradient(rgb(4, 4, 141), rgb(169, 9, 9));
+}
+
+.face{
+   position: relative;
+   width: 300px;
+   height: 300px;
+   border-radius: 50%;
+   background-color: rgb(203, 152, 43);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.face::before{
+   content: '';
+   position: absolute;
+   top: 180px;
+   width: 150px;
+   height: 70px;
+   background-color: #ffffff;
+   border-bottom-left-radius: 70px;
+   border-bottom-right-radius: 70px;
+   transition: 0.2s linear;
+}
+
+.face:hover::before{
+   top: 190px;
+   width: 150px;
+   height: 70px;
+   background-color: #ffffff;
+   border-bottom-left-radius: 0px;
+   border-bottom-right-radius: 0px;
+   border-top-left-radius: 70px;
+   border-top-right-radius: 70px;
+}
+
+.eyes{
+   position: relative;
+   top: -30px;
+   display: flex;
+}
+
+.eyes .eye{
+   position: relative;
+   width: 80px;
+   height: 80px;
+   display: block;
+   background: #fff;
+   margin: 0 15px;
+   border-radius: 50%;
+}
+
+.eyes .eye::before{
+   content: '';
+   position: absolute;
+   top: 50%;
+   left: 25%;
+   transform: translate(-50%,-50%);
+   width: 30px;
+   height: 30px;
+   background-color: #333;
+   border-radius: 50%;
+}
+
